@@ -36,6 +36,21 @@
             </div>
         </div>
     </div>
+    <script>
+
+        const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric&q=kandy";
+        const apiKey = "325afb0d7a9efc075b224b75f42ed8b5";
+
+        async function checkWeather() {
+            const response = await fetch(apiUrl + `&appid=${apiKey}`);
+            var data = await response.json();
+
+            console.log(data);
+        }
+
+        checkWeather();
+
+    </script>
 </body>
 
 </html>
